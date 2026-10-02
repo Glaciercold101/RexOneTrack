@@ -25,113 +25,31 @@
       font-synthesis: none;
       text-rendering: optimizeLegibility;
     }
-
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.55; }
     a { color: inherit; }
     button, input { font: inherit; }
-    button:focus-visible, a:focus-visible, input:focus-visible {
-      outline: 3px solid #3b82f6;
-      outline-offset: 3px;
-    }
-    .skip-link {
-      position: absolute;
-      z-index: 10;
-      top: 10px;
-      left: 10px;
-      padding: 10px 14px;
-      transform: translateY(-150%);
-      border-radius: 10px;
-      background: var(--white);
-      color: var(--ink);
-    }
+    button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #3b82f6; outline-offset: 3px; }
+    .skip-link { position: absolute; z-index: 10; top: 10px; left: 10px; padding: 10px 14px; transform: translateY(-150%); border-radius: 10px; background: var(--white); color: var(--ink); }
     .skip-link:focus { transform: translateY(0); }
     .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
-    .topbar {
-      position: sticky;
-      z-index: 5;
-      top: 0;
-      border-bottom: 1px solid rgb(220 227 237 / 82%);
-      background: rgb(247 248 251 / 92%);
-      backdrop-filter: blur(14px);
-    }
-    .nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
+    .topbar { position: sticky; z-index: 5; top: 0; border-bottom: 1px solid rgb(220 227 237 / 82%); background: rgb(247 248 251 / 92%); backdrop-filter: blur(14px); }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 800; letter-spacing: -.04em; }
-    .brand-mark {
-      display: grid;
-      width: 38px;
-      height: 38px;
-      place-items: center;
-      border-radius: 13px;
-      background: var(--navy);
-      color: var(--lime);
-      font-size: 20px;
-      letter-spacing: -.1em;
-    }
+    .brand-mark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 13px; background: var(--navy); color: var(--lime); font-size: 20px; letter-spacing: -.1em; }
     .brand-name { font-size: 16px; }
     .brand-name span { color: var(--muted); font-weight: 600; }
     .nav-links { display: flex; align-items: center; gap: 26px; font-size: 13px; font-weight: 650; }
     .nav-links a { color: var(--muted); text-decoration: none; }
     .nav-links a:hover { color: var(--ink); }
-    .nav-cta, .button {
-      display: inline-flex;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 0 17px;
-      border: 1px solid transparent;
-      border-radius: 999px;
-      background: var(--lime);
-      color: var(--navy);
-      font-size: 13px;
-      font-weight: 800;
-      text-decoration: none;
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-    }
+    .nav-cta, .button { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 9px; padding: 0 17px; border: 1px solid transparent; border-radius: 999px; background: var(--lime); color: var(--navy); font-size: 13px; font-weight: 800; text-decoration: none; transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
     .nav-cta:hover, .button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgb(16 26 45 / 14%); }
     .nav-cta[aria-disabled="true"] { background: #e7ebf0; color: #5d6b80; box-shadow: none; cursor: not-allowed; }
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 88px 0 82px;
-      background:
-        radial-gradient(ellipse at 78% 15%, rgb(120 228 228 / 16%), transparent 35%),
-        radial-gradient(ellipse at 3% 100%, rgb(217 243 106 / 10%), transparent 37%),
-        var(--navy);
-      color: #f4f7fb;
-    }
-    .hero::after {
-      position: absolute;
-      right: -130px;
-      bottom: -270px;
-      width: 620px;
-      height: 620px;
-      border: 1px solid rgb(255 255 255 / 8%);
-      border-radius: 50%;
-      box-shadow: 0 0 0 48px rgb(255 255 255 / 2%), 0 0 0 96px rgb(255 255 255 / 2%), 0 0 0 144px rgb(255 255 255 / 2%);
-      content: "";
-      pointer-events: none;
-    }
+    .hero { position: relative; overflow: hidden; padding: 88px 0 82px; background: radial-gradient(ellipse at 78% 15%, rgb(120 228 228 / 16%), transparent 35%), radial-gradient(ellipse at 3% 100%, rgb(217 243 106 / 10%), transparent 37%), var(--navy); color: #f4f7fb; }
+    .hero::after { position: absolute; right: -130px; bottom: -270px; width: 620px; height: 620px; border: 1px solid rgb(255 255 255 / 8%); border-radius: 50%; box-shadow: 0 0 0 48px rgb(255 255 255 / 2%), 0 0 0 96px rgb(255 255 255 / 2%), 0 0 0 144px rgb(255 255 255 / 2%); content: ""; pointer-events: none; }
     .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 58px; }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin: 0 0 20px;
-      color: var(--lime);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 20px; color: var(--lime); font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
     .eyebrow::before { width: 22px; height: 1px; background: currentColor; content: ""; }
     h1, h2, h3, p { margin-top: 0; }
     h1 { max-width: 670px; margin-bottom: 20px; font-size: clamp(42px, 6.2vw, 72px); line-height: .99; letter-spacing: -.065em; }
@@ -142,432 +60,123 @@
     .button-secondary:hover { background: rgb(255 255 255 / 7%); box-shadow: none; }
     .hero-note { margin: 15px 0 0; color: #9aa9bd; font-size: 12px; }
     .hero-note strong { color: #e4ebf3; }
-    .hero-art {
-      position: relative;
-      min-height: 360px;
-      padding: 22px;
-      border: 1px solid rgb(255 255 255 / 14%);
-      border-radius: 25px;
-      background: linear-gradient(145deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 3%));
-      box-shadow: 0 30px 75px rgb(0 0 0 / 28%);
-      transform: rotate(1deg);
-    }
+    .hero-art { position: relative; min-height: 360px; padding: 22px; border: 1px solid rgb(255 255 255 / 14%); border-radius: 25px; background: linear-gradient(145deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 3%)); box-shadow: 0 30px 75px rgb(0 0 0 / 28%); transform: rotate(1deg); }
     .hero-art-label { display: flex; justify-content: space-between; color: #aab9cc; font-size: 10px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
-    .hero-preview {
-      position: relative;
-      height: 205px;
-      overflow: hidden;
-      margin-top: 18px;
-      border-radius: 15px;
-      background: linear-gradient(155deg, #4a8e9a 0%, #b1c4a8 42%, #d6ad78 43%, #675d4b 100%);
-    }
-    .hero-preview::before, .hero-preview::after {
-      position: absolute;
-      bottom: -28px;
-      width: 65%;
-      height: 85%;
-      border-radius: 44% 54% 0 0;
-      background: linear-gradient(145deg, #253f49, #152a35);
-      content: "";
-      transform: rotate(-10deg);
-    }
-    .hero-preview::before { left: -9%; clip-path: polygon(0 55%, 25% 10%, 48% 42%, 70% 4%, 100% 55%, 100% 100%, 0 100%); }
-    .hero-preview::after { right: -12%; bottom: -50px; background: linear-gradient(145deg, #406657, #203f40); clip-path: polygon(0 40%, 25% 2%, 51% 43%, 72% 10%, 100% 51%, 100% 100%, 0 100%); }
-    .preview-caption { position: absolute; z-index: 1; right: 12%; bottom: 22px; left: 12%; padding: 9px 12px; border-radius: 8px; background: rgb(8 15 24 / 78%); color: #fff; font-size: 12px; font-weight: 700; text-align: center; }
-    .hero-timeline { display: grid; gap: 8px; margin-top: 15px; }
-    .hero-lane { display: flex; align-items: center; gap: 8px; color: #96a8bd; font-size: 9px; text-transform: uppercase; }
-    .hero-lane span:first-child { width: 44px; }
-    .lane-block { height: 13px; border-radius: 4px; background: var(--cyan); }
-    .lane-block.audio { width: 68%; background: var(--purple); }
-    .lane-block.video { width: 78%; }
-    .lane-block.caption { width: 31%; height: 8px; background: var(--gold); }
-    .section { padding: 92px 0; }
-    .section-white { background: #fff; }
-    .section-heading { max-width: 650px; margin-bottom: 42px; }
-    .section-heading .eyebrow { color: #708039; }
-    h2 { margin-bottom: 13px; font-size: clamp(31px, 4.4vw, 48px); line-height: 1.05; letter-spacing: -.055em; }
-    .section-heading p { margin-bottom: 0; color: var(--muted); font-size: 16px; }
-    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-    .feature-card { min-height: 200px; padding: 25px; border: 1px solid var(--line); border-radius: 19px; background: var(--white); }
-    .feature-icon { display: grid; width: 42px; height: 42px; place-items: center; margin-bottom: 24px; border-radius: 13px; background: #f0f3e4; color: #526126; font-size: 19px; font-weight: 800; }
-    .feature-card:nth-child(2) .feature-icon { background: #e8f7f7; color: #27777a; }
-    .feature-card:nth-child(3) .feature-icon { background: #f0ebff; color: #664aab; }
-    .feature-card:nth-child(4) .feature-icon { background: #eaf0fb; color: #375b9e; }
-    .feature-card:nth-child(5) .feature-icon { background: #fff3d6; color: #92701b; }
-    .feature-card:nth-child(6) .feature-icon { background: #fbe9e9; color: #a34949; }
-    .feature-card h3 { margin-bottom: 8px; font-size: 16px; letter-spacing: -.02em; }
-    .feature-card p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
-    .demo-section { background: #eaf0f5; }
-    .demo-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(270px, .75fr); gap: 20px; align-items: start; }
-    .demo-window { overflow: hidden; border: 1px solid #263858; border-radius: 20px; background: var(--navy); color: #e7edf5; box-shadow: 0 18px 45px rgb(23 38 62 / 16%); }
-    .demo-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 17px; border-bottom: 1px solid #2a3a56; }
-    .demo-brand { font-size: 12px; font-weight: 800; }
-    .preview-badge { padding: 5px 9px; border: 1px solid rgb(217 243 106 / 34%); border-radius: 999px; color: var(--lime); font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-    .demo-workspace { display: grid; grid-template-columns: minmax(155px, .74fr) minmax(0, 1.4fr); gap: 12px; padding: 15px; }
-    .demo-panel { min-width: 0; padding: 12px; border: 1px solid #293a56; border-radius: 13px; background: #141f35; }
-    .demo-panel-title { margin-bottom: 11px; color: #97a8c0; font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
-    .sample-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 0; border-top: 1px solid #26344b; }
-    .sample-item:first-of-type { border-top: 0; }
-    .sample-name { min-width: 0; font-size: 10px; font-weight: 700; }
-    .sample-meta { display: block; color: #8393ab; font-size: 9px; font-weight: 500; }
-    .add-sample {
-      flex: 0 0 auto;
-      padding: 5px 8px;
-      border: 1px solid #455a73;
-      border-radius: 7px;
-      background: #1d2c45;
-      color: #dce6f2;
-      font-size: 9px;
-      font-weight: 750;
-      cursor: pointer;
-    }
-    .add-sample:hover:not(:disabled) { border-color: var(--lime); color: var(--lime); }
-    .add-sample:disabled { color: #81946c; cursor: default; opacity: .85; }
-    .preview-screen {
-      position: relative;
-      display: grid;
-      min-height: 176px;
-      place-items: center;
-      overflow: hidden;
-      border-radius: 9px;
-      background: linear-gradient(155deg, #387783 0%, #a7b893 42%, #d7b77e 43%, #6f6552 100%);
-    }
-    .preview-screen::before, .preview-screen::after {
-      position: absolute;
-      bottom: -28px;
-      width: 74%;
-      height: 76%;
-      background: linear-gradient(145deg, #263f49, #152a35);
-      clip-path: polygon(0 57%, 26% 10%, 49% 44%, 70% 3%, 100% 60%, 100% 100%, 0 100%);
-      content: "";
-    }
-    .preview-screen::before { left: -9%; }
-    .preview-screen::after { right: -14%; bottom: -47px; background: linear-gradient(145deg, #406657, #203f40); transform: scaleX(-1); }
-    .demo-caption {
-      position: absolute;
-      z-index: 1;
-      right: 8%;
-      bottom: 17px;
-      left: 8%;
-      display: none;
-      padding: 8px 10px;
-      border-radius: 7px;
-      background: rgb(8 15 24 / 82%);
-      color: white;
-      font-size: 10px;
-      font-weight: 750;
-      text-align: center;
-    }
-    .demo-caption.visible { display: block; }
-    .timeline-top { display: flex; justify-content: space-between; margin: 13px 0 7px; color: #92a2b8; font-size: 9px; }
-    .track-row { position: relative; display: grid; grid-template-columns: 43px 1fr; align-items: center; gap: 7px; min-height: 28px; }
-    .track-label { color: #8798b0; font-size: 8px; font-weight: 800; letter-spacing: .06em; }
-    .track-area { position: relative; height: 18px; border-top: 1px solid #33435d; background: repeating-linear-gradient(90deg, transparent 0, transparent calc(20% - 1px), rgb(255 255 255 / 6%) calc(20% - 1px), rgb(255 255 255 / 6%) 20%); }
-    .track-clip { position: absolute; top: 2px; left: 0; display: none; height: 14px; overflow: hidden; padding-inline: 6px; border: 1px solid #83ebeb; border-radius: 4px; background: #12606c; color: #eaffff; font-size: 8px; line-height: 12px; white-space: nowrap; }
-    .track-clip.audio { width: 78%; border-color: #bea5ff; background: #563b88; color: #f1eaff; }
-    #videoClip { width: 60%; }
-    .track-clip.caption-clip { width: 9%; height: 10px; border-color: #f6d46a; background: #907327; color: #fff5d0; }
-    .track-clip.visible { display: block; }
-    .playhead {
-      position: absolute;
-      z-index: 2;
-      top: -1px;
-      bottom: -4px;
-      left: 0;
-      width: 2px;
-      background: #fff;
-      pointer-events: none;
-    }
-    .playhead::before { position: absolute; top: -3px; left: -3px; width: 8px; height: 8px; border-radius: 50%; background: #fff; content: ""; }
-    .seek-control { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; margin: 11px 0 0 50px; }
-    .seek-control label, .seek-time { color: #aebbd0; font-size: 9px; font-variant-numeric: tabular-nums; }
-    .seek-control input { width: 100%; accent-color: var(--lime); }
-    .demo-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; padding: 0 15px 15px; }
-    .demo-action {
-      min-height: 36px;
-      padding: 0 12px;
-      border: 1px solid #4c5e78;
-      border-radius: 9px;
-      background: #202f48;
-      color: #f1f5f9;
-      font-size: 10px;
-      font-weight: 750;
-      cursor: pointer;
-    }
-    .demo-action.primary { border-color: transparent; background: var(--lime); color: var(--navy); }
-    .demo-action:hover:not(:disabled) { filter: brightness(1.08); }
-    .demo-action:disabled { cursor: not-allowed; opacity: .42; }
-    .reset-action { margin-left: auto; border-color: transparent; background: transparent; color: #acbad0; text-decoration: underline; text-underline-offset: 3px; }
-    .demo-aside { padding: 6px 5px; }
-    .demo-aside h3 { margin: 8px 0 10px; font-size: 20px; letter-spacing: -.04em; }
-    .demo-aside > p { color: #5c6d82; font-size: 13px; }
-    .steps { display: grid; gap: 8px; margin: 20px 0; padding: 0; list-style: none; }
-    .step { display: flex; align-items: center; gap: 11px; color: #63738a; font-size: 12px; }
-    .step-number { display: grid; width: 25px; height: 25px; flex: 0 0 25px; place-items: center; border: 1px solid #cbd5e1; border-radius: 50%; color: #718096; font-size: 10px; font-weight: 800; }
-    .step.done { color: var(--ink); font-weight: 700; }
-    .step.done .step-number { border-color: #526126; background: var(--lime); color: var(--navy); }
-    .demo-status { min-height: 58px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 12px; background: rgb(255 255 255 / 60%); color: #53647a; font-size: 11px; }
-    .demo-status strong { color: var(--ink); }
-    .demo-disclaimer { margin-top: 14px; padding-left: 12px; border-left: 2px solid #b2c459; color: #66778e; font-size: 11px; }
-    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; counter-reset: workflow; }
-    .workflow-card { position: relative; min-height: 210px; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: white; counter-increment: workflow; }
-    .workflow-card::before { display: grid; width: 31px; height: 31px; place-items: center; margin-bottom: 24px; border-radius: 10px; background: var(--navy); color: var(--lime); content: counter(workflow, decimal-leading-zero); font-size: 10px; font-weight: 850; }
-    .workflow-card h3 { margin-bottom: 8px; font-size: 15px; }
-    .workflow-card p { margin: 0; color: var(--muted); font-size: 12px; }
-    .download-section { padding: 74px 0; background: var(--navy); color: #f4f7fb; }
-    .download-panel { display: grid; grid-template-columns: 1fr minmax(240px, .58fr); gap: 45px; align-items: center; }
-    .download-section .eyebrow { color: var(--lime); }
-    .download-section h2 { max-width: 600px; }
-    .download-section p { max-width: 650px; margin-bottom: 0; color: #b7c4d6; font-size: 14px; }
-    .download-box { padding: 22px; border: 1px solid #354663; border-radius: 17px; background: #182640; }
-    .download-box .button { width: 100%; }
-    .download-box .button[aria-disabled="true"] { background: #344057; color: #c1cbda; box-shadow: none; cursor: not-allowed; }
-    .download-box p { margin: 12px 0 0; color: #aebbd0; font-size: 11px; }
-    .release-note { margin-top: 25px !important; font-size: 11px !important; }
-    .release-note strong { color: #ecf2f9; }
-    .note-link { color: var(--lime); text-underline-offset: 3px; }
-    .fine-print { margin-top: 27px; padding-top: 17px; border-top: 1px solid #2b3a54; color: #99a9be !important; font-size: 11px !important; }
-    footer { padding: 24px 0 30px; background: #0b1424; color: #9cacbf; font-size: 11px; }
-    .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
-    .footer-row p { margin: 0; }
-    .footer-brand { color: white; font-weight: 800; }
-    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
-
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 38px; }
-      .hero-art { width: min(100%, 540px); justify-self: center; }
-      .feature-grid { grid-template-columns: repeat(2, 1fr); }
-      .steps-grid { grid-template-columns: repeat(2, 1fr); }
-      .demo-layout { grid-template-columns: 1fr; }
-      .demo-aside { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
-      .demo-aside h3, .demo-aside > p { grid-column: 1 / -1; }
-      .steps { margin: 8px 0; }
-    }
-    @media (max-width: 640px) {
-      .wrap { width: min(100% - 28px, 1160px); }
-      .nav { min-height: 62px; }
-      .nav-links { gap: 12px; }
-      .nav-links a:not(.nav-cta) { display: none; }
-      .nav-cta { min-height: 38px; padding-inline: 13px; font-size: 11px; }
-      .hero { padding: 64px 0 58px; }
-      .hero-copy { font-size: 15px; }
-      .hero-art { min-height: auto; padding: 15px; }
-      .hero-preview { height: 165px; }
-      .section { padding: 67px 0; }
-      .feature-grid { grid-template-columns: 1fr; }
-      .feature-card { min-height: 0; }
-      .feature-icon { margin-bottom: 17px; }
-      .demo-workspace { grid-template-columns: 1fr; }
-      .demo-panel.media-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
-      .media-panel .demo-panel-title { grid-column: 1 / -1; }
-      .sample-item { align-items: flex-start; }
-      .demo-aside { display: block; }
-      .steps { margin: 15px 0; }
-      .steps-grid { gap: 9px; }
-      .workflow-card { min-height: 0; padding: 16px; }
-      .workflow-card::before { margin-bottom: 15px; }
-      .download-panel { grid-template-columns: 1fr; gap: 25px; }
-      .download-box { max-width: 430px; }
-    }
-    @media (max-width: 390px) {
-      .brand-name { font-size: 14px; }
-      .nav-links { gap: 8px; }
-      .nav-cta { padding-inline: 10px; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .demo-footer { gap: 6px; }
-      .demo-action { padding-inline: 9px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-    }
+    .hero-preview { position: relative; height: 205px; overflow: hidden; margin-top: 18px; border-radius: 15px; background: linear-gradient(155deg, #4a8e9a 0%, #b1c4a8 42%, #d6ad78 43%, #675d4b 100%); }
+    .hero-preview::before, .hero-preview::after { position: absolute; bottom: -28px; width: 65%; height: 85%; border-radius: 44% 54% 0 0; background: linear-gradient(145deg, #253f49, #152a35); content: ""; }
+    .hero-preview::before { left: -8%; transform: rotate(-8deg); }
+    .hero-preview::after { right: -12%; background: linear-gradient(145deg, #3d2f24, #1a1510); transform: rotate(9deg); }
+    .section { padding: 72px 0; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
+    .card { padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+    .card h3 { margin-bottom: 8px; font-size: 16px; }
+    .card p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+    .demo { display: grid; grid-template-columns: 300px 1fr; gap: 28px; margin-top: 28px; }
+    .demo-controls { display: grid; gap: 12px; }
+    .step { display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: 14px; border: 1px solid var(--line); background: var(--white); }
+    .step.done { border-color: var(--lime); background: #f6fbe0; }
+    .step-number { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: var(--white); font-size: 12px; font-weight: 800; }
+    .step.done .step-number { background: var(--lime); color: var(--navy); }
+    .timeline { position: relative; background: var(--navy); border-radius: 18px; padding: 18px; color: #cbd5e1; min-height: 260px; }
+    .lane { position: relative; height: 48px; margin: 12px 0; background: rgb(255 255 255 / 6%); border-radius: 10px; overflow: hidden; }
+    .clip { position: absolute; top: 6px; bottom: 6px; border-radius: 8px; display: none; align-items: center; padding: 0 10px; font-size: 12px; font-weight: 700; }
+    .clip.visible { display: inline-flex; }
+    #videoClip { left: 5%; width: 42%; background: var(--cyan); color: var(--navy); }
+    #audioClip { left: 5%; width: 60%; background: var(--gold); color: var(--navy); }
+    #captionClip { width: 22%; background: var(--purple); color: var(--navy); }
+    #playhead { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--lime); left: 0; }
+    .seek-row { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
+    .seek-row input { flex: 1; }
+    .download-section { padding: 72px 0; background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .download-panel { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: start; }
+    .download-box { padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
+    .fine-print { color: var(--muted); font-size: 12px; margin-top: 14px; }
+    .release-note { font-size: 13px; background: #fff8db; border: 1px dashed #e8d48a; padding: 10px 12px; border-radius: 10px; }
+    .note-link { text-decoration: underline; }
+    footer { padding: 28px 0; color: var(--muted); font-size: 13px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .footer-brand { font-weight: 800; color: var(--ink); }
+    @media (max-width: 900px) { .hero-grid, .download-panel, .demo, .features { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="topbar">
-    <nav class="nav wrap" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Rex One Track home">
-        <span class="brand-mark" aria-hidden="true">R.</span>
-        <span class="brand-name">Rex One Track <span>/ Windows</span></span>
-      </a>
+  <div class="topbar">
+    <div class="nav wrap">
+      <a class="brand" href="#"><span class="brand-mark">R</span><span class="brand-name">Rex One Track <span>· VerseBox</span></span></a>
       <div class="nav-links">
         <a href="#features">Features</a>
-        <a href="#preview">Interactive preview</a>
-        <a href="#getting-started">Getting started</a>
-        <a class="nav-cta" href="#download" id="navDownload">Get the app <span aria-hidden="true">&rarr;</span></a>
+        <a href="#demo">Demo</a>
+        <a href="#download">Download</a>
+        <a class="nav-cta" id="navDownload" href="https://glaciercold101.github.io/VerseBox-Online/#app-rex-onetrack">Open in VerseBox</a>
       </div>
-    </nav>
-  </header>
+    </div>
+  </div>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
+    <section class="hero">
       <div class="hero-grid wrap">
         <div>
-          <p class="eyebrow">A focused desktop editing workflow</p>
-          <h1 id="hero-title">Make every moment <em>line up.</em></h1>
-          <p class="hero-copy">Bring picture, sound, and subtitle cues onto one timeline. Spot the moments that matter, shape the cut, and export from your own Windows PC.</p>
+          <p class="eyebrow">Local-first · Windows · No installers</p>
+          <h1>Make every moment <em>line up</em></h1>
+          <p class="hero-copy">Rex One Track is a local-first Windows timeline editor for video, audio and subtitle spotting. Import media, arrange the timeline, and export. Processing uses the native wrapper and FFmpeg on this computer; this site does not process your media.</p>
           <div class="hero-actions">
-            <a class="button" href="#download">Get Rex One Track <span aria-hidden="true">&rarr;</span></a>
-            <a class="button button-secondary" href="#preview">Explore the preview <span aria-hidden="true">&darr;</span></a>
+            <a class="button" href="#download">Download for Windows</a>
+            <a class="button button-secondary" href="#demo">Try interactive preview</a>
           </div>
-          <p class="hero-note"><strong>Windows desktop app.</strong> Your media is processed locally by the native wrapper and FFmpeg.</p>
+          <p class="hero-note"><strong>No bloat.</strong> Download, unzip, and run. No registry mess.</p>
         </div>
-        <div class="hero-art" aria-label="Illustration of a video preview and layered timeline">
-          <div class="hero-art-label"><span>Rex One Track</span><span>Spotting Lab</span></div>
-          <div class="hero-preview"><div class="preview-caption">The words find their moment.</div></div>
-          <div class="hero-timeline" aria-hidden="true">
-            <div class="hero-lane"><span>Video</span><span class="lane-block video"></span></div>
-            <div class="hero-lane"><span>Audio</span><span class="lane-block audio"></span></div>
-            <div class="hero-lane"><span>Subs</span><span class="lane-block caption"></span></div>
+        <div class="hero-art">
+          <div class="hero-art-label"><span>Timeline preview</span><span id="seekReadout">00:00</span></div>
+          <div class="hero-preview"></div>
+          <div style="margin-top:16px; display:flex; gap:8px;">
+            <div style="height:38px; flex:1; border-radius:10px; background: var(--cyan);"></div>
+            <div style="height:38px; flex:1.2; border-radius:10px; background: var(--gold);"></div>
+            <div style="height:38px; flex:.8; border-radius:10px; background: var(--purple);"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-white" id="features" aria-labelledby="features-title">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Built around the timeline</p>
-          <h2 id="features-title">The essentials, in one focused workspace.</h2>
-          <p>Rex One Track pairs a visual HTML-canvas preview with native media export. The Windows wrapper keeps the processing close to your files.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">01</div>
-            <h3>One bin for your media</h3>
-            <p>Import video, audio, and still images into the media bin, then add items to the main or audio lane.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">02</div>
-            <h3>A timeline you can shape</h3>
-            <p>Preview and seek through your sequence, adjust clips, split at the playhead, detach video audio, zoom to fit, and save or reload jobs.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">03</div>
-            <h3>Subtitle spotting tools</h3>
-            <p>Load SRT, VTT, or text lines; spot cue in/out points, skip or revisit a line, and adjust subtitle size and alignment.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">04</div>
-            <h3>Preview before export</h3>
-            <p>See a canvas-based preview, move subtitle placement, and refine the timing against your timeline.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">05</div>
-            <h3>Formats for the finish</h3>
-            <p>Render video as MP4 or WebM, audio as MP3, and export spotted subtitle cues as SRT.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">06</div>
-            <h3>A local desktop workflow</h3>
-            <p>The wrapper transfers selected media to a temporary folder on this PC, runs FFmpeg locally, then cleans up temporary files when it closes.</p>
-          </article>
-        </div>
+    <section class="section wrap" id="features">
+      <p class="eyebrow">Why Rex</p>
+      <h2>Portable timeline, no cloud needed</h2>
+      <div class="features">
+        <article class="card">
+          <h3>Local-first</h3>
+          <p>Import media, arrange the timeline, and export. Processing uses the native wrapper and FFmpeg on this computer; this site does not process your media.</p>
+        </article>
+        <article class="card">
+          <h3>Video + Audio + Subs</h3>
+          <p>Single-track workflow designed for fast spotting. Add a video clip, lay audio, and drop subtitle cues exactly where the playhead sits.</p>
+        </article>
+        <article class="card">
+          <h3>Portable bundle</h3>
+          <p>No installers, no bloat, no registry mess. Just download the Windows bundle, unzip, and run. Crafted for people who like software small and theirs.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section demo-section" id="preview" aria-labelledby="preview-title">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Try the flow</p>
-          <h2 id="preview-title">A tiny timeline, just for exploring.</h2>
-          <p>Use sample items to build a mock sequence, seek to a moment, place a subtitle cue, and see the export step.</p>
+    <section class="section wrap" id="demo">
+      <p class="eyebrow">Interactive preview</p>
+      <h2>Try the flow — no files touched</h2>
+      <div class="demo">
+        <div class="demo-controls">
+          <div class="step" id="stepVideo"><span class="step-number">1</span><div><strong>Add video</strong><br><button class="button" id="addVideo" style="margin-top:6px; min-height:32px;">Add clip</button></div></div>
+          <div class="step" id="stepAudio"><span class="step-number">2</span><div><strong>Add audio</strong><br><button class="button" id="addAudio" style="margin-top:6px; min-height:32px;">Add audio</button></div></div>
+          <div class="step" id="stepSeek"><span class="step-number">3</span><div><strong>Seek</strong><br><input type="range" id="seekSlider" min="0" max="30" value="0" disabled style="width:100%; margin-top:6px;"><span id="seekTime" style="font-size:12px;">00:00</span></div></div>
+          <div class="step" id="stepCue"><span class="step-number">4</span><div><strong>Subtitle cue</strong><br><button class="button" id="addCue" style="margin-top:6px; min-height:32px;">Add subtitle cue</button></div></div>
+          <div class="step" id="stepExport"><span class="step-number">5</span><div><strong>Export</strong><br><button class="button" id="mockExport" style="margin-top:6px; min-height:32px;">Show mock export</button></div></div>
+          <button class="button button-secondary" id="resetDemo" style="background: var(--white); color: var(--ink); border:1px solid var(--line);">Reset demo</button>
+          <p id="demoStatus" style="font-size:13px; color:var(--muted);"><strong>Ready.</strong> Add a sample video clip to begin.</p>
         </div>
-        <div class="demo-layout">
-          <div class="demo-window" aria-label="Interactive preview of a sample timeline editor">
-            <div class="demo-toolbar">
-              <span class="demo-brand">Rex One Track <span aria-hidden="true">/</span> Sample project</span>
-              <span class="preview-badge">Interactive preview</span>
-            </div>
-            <div class="demo-workspace">
-              <section class="demo-panel media-panel" aria-labelledby="sample-bin-title">
-                <h3 class="demo-panel-title" id="sample-bin-title">Media bin · samples</h3>
-                <div class="sample-item">
-                  <span class="sample-name">coastline.mp4 <span class="sample-meta">Sample video · 18 sec</span></span>
-                  <button class="add-sample" id="addVideo" type="button">Add clip</button>
-                </div>
-                <div class="sample-item">
-                  <span class="sample-name">ambient.wav <span class="sample-meta">Sample audio · 24 sec</span></span>
-                  <button class="add-sample" id="addAudio" type="button">Add audio</button>
-                </div>
-              </section>
-              <section class="demo-panel" aria-labelledby="sample-preview-title">
-                <h3 class="demo-panel-title" id="sample-preview-title">Preview · sample frame</h3>
-                <div class="preview-screen" aria-label="Illustrated sample frame">
-                  <div class="demo-caption" id="demoCaption">The words find their moment.</div>
-                </div>
-                <div class="timeline-top"><span>Timeline · 00:30</span><span id="seekReadout">00:00</span></div>
-                <div class="track-row">
-                  <span class="track-label">VIDEO</span>
-                  <div class="track-area" id="videoTrack">
-                    <span class="track-clip" id="videoClip">coastline.mp4</span>
-                    <span class="playhead" id="playhead" aria-hidden="true"></span>
-                  </div>
-                </div>
-                <div class="track-row">
-                  <span class="track-label">AUDIO</span>
-                  <div class="track-area"><span class="track-clip audio" id="audioClip">ambient.wav</span></div>
-                </div>
-                <div class="track-row">
-                  <span class="track-label">SUBTITLE</span>
-                  <div class="track-area"><span class="track-clip caption-clip" id="captionClip">Sample cue</span></div>
-                </div>
-                <div class="seek-control">
-                  <label for="seekSlider">Seek</label>
-                  <input id="seekSlider" type="range" min="0" max="30" step="1" value="0" disabled aria-describedby="seek-help">
-                  <span class="seek-time" id="seekTime">00:00</span>
-                </div>
-                <span class="sr-only" id="seek-help">Use the arrow keys to seek after adding the sample video and audio.</span>
-              </section>
-            </div>
-            <div class="demo-footer">
-              <button class="demo-action" id="addCue" type="button" disabled>Add subtitle cue</button>
-              <button class="demo-action primary" id="mockExport" type="button" disabled>Show mock export</button>
-              <button class="demo-action reset-action" id="resetDemo" type="button">Reset preview</button>
-            </div>
-          </div>
-
-          <aside class="demo-aside" aria-labelledby="demo-guide-title">
-            <h3 id="demo-guide-title">Follow the sequence</h3>
-            <p>This is a self-contained UI illustration. It uses no real media and does not connect to the desktop app.</p>
-            <ol class="steps" aria-label="Interactive preview progress">
-              <li class="step" id="stepVideo"><span class="step-number">1</span><span>Add a sample video clip</span></li>
-              <li class="step" id="stepAudio"><span class="step-number">2</span><span>Add a sample audio clip</span></li>
-              <li class="step" id="stepSeek"><span class="step-number">3</span><span>Seek to a timeline moment</span></li>
-              <li class="step" id="stepCue"><span class="step-number">4</span><span>Place a subtitle cue</span></li>
-              <li class="step" id="stepExport"><span class="step-number">5</span><span>See the export step</span></li>
-            </ol>
-            <div class="demo-status" id="demoStatus" role="status" aria-live="polite"><strong>Ready.</strong> Add a sample video clip to begin.</div>
-            <p class="demo-disclaimer">Preview only. No files are selected, uploaded, rendered, or downloaded. The export result is a visual mock, not a media file.</p>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white" id="getting-started" aria-labelledby="getting-started-title">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Getting started on Windows</p>
-          <h2 id="getting-started-title">Unzip the bundle. Open the app. Make a cut.</h2>
-          <p>Rex One Track is a Windows wrapper package, not a browser-hosted editing service. Keep the distributed files together so the app can find its page and FFmpeg tools.</p>
-        </div>
-        <div class="steps-grid">
-          <article class="workflow-card">
-            <h3>Download the release bundle</h3>
-            <p>Get the ZIP attached to the project's GitHub Release. A Pages site cannot serve a repository-relative <code>bin</code> folder as the downloadable app package.</p>
-          </article>
-          <article class="workflow-card">
-            <h3>Extract the full folder</h3>
-            <p>Keep <code>html-wrapper.exe</code>, <code>index.html</code>, and the <code>ffmpeg</code> folder together. The folder must include both <code>ffmpeg.exe</code> and <code>ffprobe.exe</code>.</p>
-          </article>
-          <article class="workflow-card">
-            <h3>Launch the wrapper</h3>
-            <p>Run <code>html-wrapper.exe</code>. It opens the bundled app in an installed Chrome or Edge app window, or a supported portable browser beside the executable.</p>
-          </article>
-          <article class="workflow-card">
-            <h3>Build and export locally</h3>
-            <p>Import media, arrange the timeline, and export. Processing uses the native wrapper and FFmpeg on this computer; this site does not process your media.</p>
-          </article>
+        <div class="timeline">
+          <div style="display:flex; justify-content:space-between; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#8aa0b8;"><span>Video</span><span>00:30</span></div>
+          <div class="lane"><div class="clip" id="videoClip">sample-video.mp4</div><div id="playhead"></div><div class="clip" id="captionClip">Sample subtitle</div></div>
+          <div style="font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#8aa0b8;">Audio</div>
+          <div class="lane"><div class="clip" id="audioClip">sample-audio.wav</div></div>
+          <div style="font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#8aa0b8; margin-top:10px;">Captions</div>
+          <div class="lane"><div id="demoCaption" class="clip" style="position:relative; display:none; background:var(--white); color:var(--ink);">This is a sample cue at <span id="captionTime"></span></div></div>
         </div>
       </div>
     </section>
@@ -582,12 +191,102 @@
           <p class="fine-print">Media is processed locally by the desktop wrapper and FFmpeg; selected media is copied to a temporary folder on this PC and removed when the wrapper closes. Rex One Track is not a browser-hosted media processing service. The wrapper also makes a startup check against its configured version endpoint. This static site and its interactive preview make no network calls and use no tracking or third-party runtime assets.</p>
         </div>
         <div class="download-box">
-          <a class="button" id="downloadLink" aria-disabled="true">Download link not configured</a>
-          <p id="downloadHelp">The app bundle has not been linked yet. The release asset URL will be enabled here when configured.</p>
+          <a class="button" id="downloadLink" href="https://glaciercold101.github.io/VerseBox-Online/#app-rex-onetrack">Download for Windows</a>
+          <p id="downloadHelp">Opens the configured VerseBox hub page for Rex One Track.</p>
           <p>Need publishing steps? See the <a class="note-link" href="README.md">docs maintainer note</a>.</p>
+          <p style="margin-top:12px; font-size:12px; color:var(--muted);">Direct GitHub Release asset? Replace RELEASE_DOWNLOAD_URL below with your github.com URL — e.g. https://github.com/glaciercold101/VerseBox-Online/releases/download/v1.0.0/RexOneTrack-Windows.zip</p>
         </div>
       </div>
     </section>
+  
+    <section class="section wrap" id="quick-guide" style="padding-top:32px;">
+      <div style="max-width:440px; margin:0 auto; background:#18181f; border-radius:28px; overflow:hidden; border:1px solid rgba(255,255,255,0.07); box-shadow:0 24px 64px rgba(0,0,0,0.6);">
+        <div style="display:flex; justify-content:center; gap:7px; padding:18px 0 4px;"><span style="width:5px; height:5px; border-radius:50%; background:rgba(255,255,255,0.25); display:inline-block;"></span><span style="width:5px; height:5px; border-radius:50%; background:rgba(255,255,255,0.25); display:inline-block;"></span><span style="width:5px; height:5px; border-radius:50%; background:rgba(255,255,255,0.25); display:inline-block;"></span></div>
+        <div style="position:relative; padding:10px 28px 20px;">
+          <h2 style="font-size:34px; line-height:0.95; font-weight:800; letter-spacing:-0.02em; background:linear-gradient(to bottom, #f9e68a, #b78f1f); -webkit-background-clip:text; background-clip:text; color:transparent; margin:0;">Rex One Track</h2>
+          <div style="margin-top:9px; font-size:10.5px; font-weight:600; letter-spacing:0.22em; color:#7d7d86; text-transform:uppercase;">QUICK GUIDE — TIMELINE STYLE</div>
+          <img src="Rex.png" alt="Rex puppy" style="position:absolute; right:18px; top:6px; width:64px; height:64px; object-fit:contain;" onerror="this.style.display='none'">
+        </div>
+        <div style="height:1px; background:linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent); margin:0 28px;"></div>
+        
+        <!-- IMPORT -->
+        <div style="display:flex; gap:16px; align-items:flex-start; padding:17px 28px;">
+          <div style="flex-shrink:0; width:56px; height:56px; border-radius:14px; background:#1f1f28; border:1px solid rgba(212,180,74,0.28); display:grid; place-items:center; font-size:20px;">📥</div>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; color:#e8c95a; text-transform:uppercase;">IMPORT</div>
+            <div style="margin-top:7px; font-size:14px; line-height:1.45; color:rgba(255,255,255,0.9);">Import audio, video and images.</div>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(255,255,255,0.06); margin:0 28px;"></div>
+        
+        <!-- EDIT -->
+        <div style="display:flex; gap:16px; align-items:flex-start; padding:17px 28px;">
+          <div style="flex-shrink:0; width:56px; height:56px; border-radius:14px; background:#1f1f28; border:1px solid rgba(212,180,74,0.28); display:grid; place-items:center; font-size:20px;">✂️</div>
+          <div style="flex:1;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; color:#e8c95a;">EDIT</div>
+            <div style="margin-top:7px; font-size:14px; color:rgba(255,255,255,0.9);">Edit them on Track.</div>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(255,255,255,0.06); margin:0 28px;"></div>
+        
+        <!-- DETACH -->
+        <div style="display:flex; gap:16px; align-items:flex-start; padding:17px 28px;">
+          <div style="flex-shrink:0; width:56px; height:56px; border-radius:14px; background:#1f1f28; border:1px solid rgba(212,180,74,0.28); display:grid; place-items:center; font-size:20px;">🔀</div>
+          <div style="flex:1;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; color:#e8c95a;">DETACH & SPLIT</div>
+            <div style="margin-top:7px; font-size:14px; color:rgba(255,255,255,0.9);">You can also detach audio / video and split media.</div>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(255,255,255,0.06); margin:0 28px;"></div>
+        
+        <!-- LOAD -->
+        <div style="display:flex; gap:16px; align-items:flex-start; padding:17px 28px;">
+          <div style="flex-shrink:0; width:56px; height:56px; border-radius:14px; background:#1f1f28; border:1px solid rgba(212,180,74,0.28); display:grid; place-items:center; font-size:20px;">📝</div>
+          <div style="flex:1;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; color:#e8c95a;">LOAD SUBTITLES</div>
+            <div style="margin-top:7px; font-size:14px; color:rgba(255,255,255,0.9);">Load text / SRT subtitle file; play the compiled video; and add lyrics / subtitles by spotting ( easy method of adding subtitles )</div>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(255,255,255,0.06); margin:0 28px;"></div>
+        
+        <!-- EXPORT -->
+        <div style="display:flex; gap:16px; align-items:flex-start; padding:17px 28px;">
+          <div style="flex-shrink:0; width:56px; height:56px; border-radius:14px; background:#1f1f28; border:1px solid rgba(212,180,74,0.28); display:grid; place-items:center; font-size:20px;">⬇️</div>
+          <div style="flex:1;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; color:#e8c95a;">EXPORT</div>
+            <div style="margin-top:7px; font-size:14px; color:rgba(255,255,255,0.9);">Then Export your compiled work and test the results.</div>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(255,255,255,0.06); margin:0 28px;"></div>
+        
+        <!-- SPOT WITH KEYS - CORRECT ICONS -->
+        <div style="display:flex; gap:16px; align-items:flex-start; padding:17px 28px;">
+          <div style="flex-shrink:0; width:56px; height:56px; border-radius:14px; background:#1f1f28; border:1px solid rgba(212,180,74,0.28); display:grid; place-items:center; font-size:20px;">⌨️</div>
+          <div style="flex:1;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; color:#e8c95a;">SPOT WITH KEYS</div>
+            <div style="margin-top:7px; font-size:14px; color:rgba(255,255,255,0.9);">Spott subtitle with arrow keys whilst the media is playing.</div>
+            <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:8px;">
+              <span style="display:inline-flex; align-items:center; gap:6px; height:26px; padding:0 10px; border-radius:999px; background:#23232c; border:1px solid rgba(212,180,74,0.2); font-size:11px; font-weight:600; color:#e8c95a;"><span>▲</span> Skip</span>
+              <span style="display:inline-flex; align-items:center; gap:6px; height:26px; padding:0 10px; border-radius:999px; background:#23232c; border:1px solid rgba(212,180,74,0.2); font-size:11px; font-weight:600; color:#e8c95a;"><span>▼</span> Enter</span>
+              <span style="display:inline-flex; align-items:center; gap:6px; height:26px; padding:0 10px; border-radius:999px; background:#23232c; border:1px solid rgba(212,180,74,0.2); font-size:11px; font-weight:600; color:#e8c95a;"><span>▶</span> End displayed subtitle</span>
+              <span style="display:inline-flex; align-items:center; gap:6px; height:26px; padding:0 10px; border-radius:999px; background:#23232c; border:1px solid rgba(212,180,74,0.2); font-size:11px; font-weight:600; color:#e8c95a;"><span>◀</span> Delete last</span>
+            </div>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(255,255,255,0.06); margin:0 28px;"></div>
+        
+        <div style="padding:16px 22px 20px;">
+          <div style="border-radius:16px; border:1px solid rgba(212,180,74,0.7); background:rgba(32,30,22,0.8); padding:13px 14px; display:flex; gap:11px;">
+            <div style="flex-shrink:0; width:28px; height:28px; border-radius:8px; background:#2a281d; border:1px solid rgba(212,180,74,0.3); display:grid; place-items:center; font-size:14px;">⚠️</div>
+            <div style="flex:1;">
+              <div style="font-size:11px; font-weight:700; letter-spacing:0.16em; color:#e8c95a; text-transform:uppercase;">IMPORTANT</div>
+              <div style="margin-top:6px; font-size:12.5px; line-height:1.5; color:rgba(232,226,198,0.9);">Media is processed locally by FFmpeg wrapper. Temp files removed when wrapper closes. No upload, no tracking.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -598,17 +297,10 @@
   </footer>
 
   <script>
-    // Set this to the direct URL of the complete Windows bundle attached to a GitHub Release.
-    const RELEASE_DOWNLOAD_URL = "";
+    // UPDATED: Now points to VerseBox hub. Replace with direct GitHub Release asset URL when ready.
+    const RELEASE_DOWNLOAD_URL = "https://glaciercold101.github.io/VerseBox-Online/#app-rex-onetrack";
 
-    const demo = {
-      video: false,
-      audio: false,
-      sought: false,
-      cue: false,
-      exported: false,
-      time: 0
-    };
+    const demo = { video: false, audio: false, sought: false, cue: false, exported: false, time: 0 };
     const byId = (id) => document.getElementById(id);
     const slider = byId("seekSlider");
     const formatTime = (seconds) => `00:${String(seconds).padStart(2, "0")}`;
@@ -622,84 +314,67 @@
       byId("videoClip").classList.toggle("visible", demo.video);
       byId("audioClip").classList.toggle("visible", demo.audio);
       byId("captionClip").classList.toggle("visible", demo.cue);
-      byId("demoCaption").classList.toggle("visible", demo.cue);
+      const cap = byId("demoCaption");
+      if (cap) cap.style.display = demo.cue ? "inline-flex" : "none";
       byId("playhead").style.left = `${(demo.time / 30) * 100}%`;
-      byId("captionClip").style.left = `${Math.min((demo.time / 30) * 100, 91)}%`;
+      const cc = byId("captionClip");
+      if (cc) cc.style.left = `${Math.min((demo.time / 30) * 100, 91)}%`;
       byId("seekReadout").textContent = formatTime(demo.time);
       byId("seekTime").textContent = formatTime(demo.time);
+      const ct = document.getElementById("captionTime");
+      if (ct) ct.textContent = formatTime(demo.time);
       byId("addCue").disabled = !(demo.video && demo.audio && demo.sought) || demo.cue;
       byId("addCue").textContent = demo.cue ? "Cue placed" : "Add subtitle cue";
       byId("mockExport").disabled = !demo.cue || demo.exported;
       byId("mockExport").textContent = demo.exported ? "Preview shown" : "Show mock export";
-
-      const completed = [
-        demo.video,
-        demo.video && demo.audio,
-        demo.sought,
-        demo.cue,
-        demo.exported
-      ];
+      const completed = [demo.video, demo.video && demo.audio, demo.sought, demo.cue, demo.exported];
       completed.forEach((done, index) => {
         const item = byId(["stepVideo", "stepAudio", "stepSeek", "stepCue", "stepExport"][index]);
+        if (!item) return;
         item.classList.toggle("done", done);
-        item.querySelector(".step-number").textContent = done ? "✓" : String(index + 1);
+        const num = item.querySelector(".step-number");
+        if (num) num.textContent = done ? "✓" : String(index + 1);
       });
     }
-
     function setStatus(title, message) {
-      byId("demoStatus").replaceChildren();
+      const el = byId("demoStatus");
+      el.replaceChildren();
       const strong = document.createElement("strong");
       strong.textContent = `${title} `;
-      byId("demoStatus").append(strong, document.createTextNode(message));
+      el.append(strong, document.createTextNode(message));
     }
-
-    byId("addVideo").addEventListener("click", () => {
-      demo.video = true;
-      updateDemo();
-      setStatus("Video added.", "A sample clip is now on the main timeline lane.");
-    });
-    byId("addAudio").addEventListener("click", () => {
-      demo.audio = true;
-      updateDemo();
-      setStatus("Audio added.", "A sample waveform clip is now on the audio lane.");
-    });
-    slider.addEventListener("input", () => {
-      demo.time = Number(slider.value);
-      demo.sought = true;
-      updateDemo();
-      setStatus("Playhead moved.", `The sample timeline is at ${formatTime(demo.time)}. Add a subtitle cue at this moment.`);
-    });
-    byId("addCue").addEventListener("click", () => {
-      demo.cue = true;
-      updateDemo();
-      setStatus("Cue placed.", `A sample subtitle cue is shown at ${formatTime(demo.time)}.`);
-    });
-    byId("mockExport").addEventListener("click", () => {
-      demo.exported = true;
-      updateDemo();
-      setStatus("Mock export step.", "Preview only. No file was rendered, saved, or downloaded.");
-    });
-    byId("resetDemo").addEventListener("click", () => {
-      Object.assign(demo, { video: false, audio: false, sought: false, cue: false, exported: false, time: 0 });
-      slider.value = "0";
-      updateDemo();
-      setStatus("Ready.", "Add a sample video clip to begin.");
-      byId("addVideo").focus();
-    });
+    byId("addVideo").addEventListener("click", () => { demo.video = true; updateDemo(); setStatus("Video added.", "A sample clip is now on the main timeline lane."); });
+    byId("addAudio").addEventListener("click", () => { demo.audio = true; updateDemo(); setStatus("Audio added.", "A sample waveform clip is now on the audio lane."); });
+    slider.addEventListener("input", () => { demo.time = Number(slider.value); demo.sought = true; updateDemo(); setStatus("Playhead moved.", `The sample timeline is at ${formatTime(demo.time)}. Add a subtitle cue at this moment.`); });
+    byId("addCue").addEventListener("click", () => { demo.cue = true; updateDemo(); setStatus("Cue placed.", `A sample subtitle cue is shown at ${formatTime(demo.time)}.`); });
+    byId("mockExport").addEventListener("click", () => { demo.exported = true; updateDemo(); setStatus("Mock export step.", "Preview only. No file was rendered, saved, or downloaded."); });
+    byId("resetDemo").addEventListener("click", () => { Object.assign(demo, { video: false, audio: false, sought: false, cue: false, exported: false, time: 0 }); slider.value = "0"; updateDemo(); setStatus("Ready.", "Add a sample video clip to begin."); byId("addVideo").focus(); });
     updateDemo();
 
+    // FIXED: Allow github.com AND github.io (VerseBox hub) links — original code only allowed github.com and stayed disabled
     if (RELEASE_DOWNLOAD_URL) {
-      const link = byId("downloadLink");
-      const url = new URL(RELEASE_DOWNLOAD_URL, window.location.href);
-      if (url.protocol === "https:" && url.hostname === "github.com") {
-        link.href = url.href;
-        link.removeAttribute("aria-disabled");
-        link.textContent = "Download for Windows";
-        byId("downloadHelp").textContent = "Opens the configured GitHub Release asset.";
-        byId("navDownload").href = url.href;
-        byId("navDownload").target = "_blank";
-        byId("navDownload").rel = "noopener noreferrer";
-      }
+      try {
+        const link = byId("downloadLink");
+        const url = new URL(RELEASE_DOWNLOAD_URL, window.location.href);
+        if (url.protocol === "https:") {
+          const isGitHubCom = url.hostname === "github.com";
+          const isGitHubIo = url.hostname.endsWith("github.io");
+          if (isGitHubCom || isGitHubIo) {
+            link.href = url.href;
+            link.removeAttribute("aria-disabled");
+            link.textContent = isGitHubCom ? "Download for Windows" : "Open in VerseBox";
+            byId("downloadHelp").textContent = isGitHubCom ? "Opens the configured GitHub Release asset." : "Opens the VerseBox hub page for Rex One Track.";
+            const nav = byId("navDownload");
+            if (nav) {
+              nav.href = url.href;
+              if (isGitHubCom) {
+                nav.target = "_blank";
+                nav.rel = "noopener noreferrer";
+              }
+            }
+          }
+        }
+      } catch(e) { console.warn("Invalid RELEASE_DOWNLOAD_URL", e); }
     }
   </script>
 </body>
