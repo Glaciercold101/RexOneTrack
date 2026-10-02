@@ -30,5 +30,5 @@ No installer — unzip and run. Portable.
 
 <!-- Centered version (looks better on GitHub) -->
 <p align="center">
-  <img src="./rex-quick-guide-final.png" width="440" alt="Rex One Track Quick Guide — Timeline Style">
+  <img src="./readme.jpg" width="440" alt="Rex One Track Quick Guide — Timeline Style">
 </p>
